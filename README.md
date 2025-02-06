@@ -6,6 +6,10 @@ In order to evaluate the correct deployment of both methods and to facilitate th
 
 [adivina-el-numero-s3 Juanjo Saez](http://juanjo-demo-s3.s3-website-us-east-1.amazonaws.com)
 
+[Juanjo-Saez github repository](https://github.com/Juanjo-Saez/Assessable_Activity2_WAD_2024_25/edit/main/README.md)
+
+[Video tutorial of the process](https://youtu.be/Lb2jnoI0Pao)
+
 ## EC2 Instance
 
 For this activity, we have to create an EC2 Instance on Amazon Web Services (AWS) with an elastic IP address that runs the latest version of Ubuntu Server and install all the necessary packages to have a web server with nodejs and npm and all the additional tools required to deploy the adivina-el-numero React project with Vite
@@ -25,7 +29,11 @@ This means that we are connected to our ubuntu machine through our windows cmd a
 
 `sudo apt-get update`
 
-Now we need to make sure we have nodejs and npm for this project, so we install them with *sudo apt-get install nodejs npm* (in this case, showing we had already done so in this machine) 
+After this, remember that what we want is to deploy our react app, so we do need to clone the repository inside our Instance
+
+`sudo git clone https://github.com/gisgarme/adivina-el-numero`
+
+Now we need to make sure we have nodejs and npm for this project, so we install them with `sudo apt-get install nodejs npm` (in this case, showing we had already done so in this machine) 
 
 ![imagen](https://github.com/user-attachments/assets/b613336f-ffde-4152-9053-77f8a6019bed)
 
@@ -52,6 +60,7 @@ We can check that everything runs with a log
 ![imagen](https://github.com/user-attachments/assets/e6f7940f-07d7-436d-a77e-7c63955940fe)
 
 And then check the running project at [EC2 AWS vite-server instance](http://3.210.19.233/)
+The url will be the HTTP we chosed and then the public IPv4 address that we had associated before. With the inbound rule of port 80, we do not need to specify with :80 in the url that it is that port.
 
 ![imagen](https://github.com/user-attachments/assets/451b6699-3ae1-4f75-a424-e54a02975eee)
 
